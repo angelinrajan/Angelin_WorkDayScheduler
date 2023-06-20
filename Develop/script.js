@@ -38,7 +38,7 @@ $('#hour-17 textarea').val(localStorage.getItem('hour-17'))
 $('#hour-18 textarea').val(localStorage.getItem('hour-18'))
 $('#hour-19 textarea').val(localStorage.getItem('hour-19'))
 $('#hour-20 textarea').val(localStorage.getItem('hour-20'))
-// in the textarea for the hour 9 block. I would like ti to say hello
+
 
 
 // var gettexts = storage.getItem('Value');
