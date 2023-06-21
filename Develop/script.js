@@ -25,7 +25,7 @@ var nowTime = dayjs().hour();
 //   console.log(indexRow);
 
 // }
-
+//Obtaining stored data from local storage
 $('#hour-9 textarea').val(localStorage.getItem('hour-9'))
 $('#hour-10 textarea').val(localStorage.getItem('hour-10'))
 $('#hour-11 textarea').val(localStorage.getItem('hour-11'))
@@ -46,10 +46,10 @@ $('#hour-20 textarea').val(localStorage.getItem('hour-20'))
 
 // Attach click event listener to each save button
 $(".saveBtn").on("click", function() { 
-
+//setting variables for silbling and parent elements of the save button
   var eventText = $(this).siblings(".description").val();
   var eventTime = $(this).parent().attr('id');
-
+//Adding events to local storage
   localStorage.setItem(eventTime, eventText);
 
 
@@ -77,7 +77,7 @@ $(".saveBtn").on("click", function() {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-
+//obtaining current hour and comparing it to the hours within the timeblock and setting past,present, or future
 $('.time-block').each(function(){
 
   var rowHour = parseInt($(this).attr('id').split('-')[1])
@@ -101,7 +101,7 @@ $('.time-block').each(function(){
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-
+//code to display current date in the header of the page.
     var day = dayjs().format('dddd, MMMM D');
     $('#currentDay').text(day)
     
